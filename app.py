@@ -1,9 +1,17 @@
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
+import os
+import gdown
 
-# Load trained YOLO model
-model = YOLO("best.pt")
+MODEL_PATH = "best.pt"
+FILE_ID = "1G1nZ-6TPcdAHyIOyo6Mgvrsqsckx37i1"
+
+if not os.path.exists(MODEL_PATH):
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+    gdown.download(url, MODEL_PATH, quiet=False)
+
+model = YOLO(MODEL_PATH)
 
 # App title
 st.title("Palm Oil Leaf Nutrient Stress Detection 🌱")
