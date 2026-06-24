@@ -79,84 +79,35 @@ language = st.selectbox(
 # ---------------- REMEDIES ----------------
 
 remedies = {
-
     "boron": {
-
-        "English":
-        "Boron deficiency detected. Use Borax or Solubor fertilizer in recommended quantity.",
-
-        "Telugu":
-        "బోరాన్ లోపం కనిపించింది. బోరాక్స్ లేదా సోలుబోర్ ఎరువును వాడండి.",
-
-        "Hindi":
-        "बोरॉन की कमी पाई गई है। Borax या Solubor खाद उपयोग करें।",
-
-        "Tamil":
-        "போரான் குறைபாடு கண்டறியப்பட்டது. Borax அல்லது Solubor பயன்படுத்தவும்."
+        "English": "Boron deficiency detected. Use Borax or Solubor fertilizer in recommended quantity. Consult a local agriculture officer before applying.",
+        "Telugu": "బోరాన్ లోపం కనిపించింది. బోరాక్స్ లేదా సోలుబోర్ ఎరువును సిఫార్సు చేసిన మోతాదులో వాడండి. వాడే ముందు స్థానిక వ్యవసాయ అధికారిని సంప్రదించండి.",
+        "Hindi": "बोरॉन की कमी पाई गई है। Borax या Solubor खाद को recommended मात्रा में उपयोग करें। उपयोग से पहले कृषि अधिकारी से सलाह लें।",
+        "Tamil": "போரான் குறைபாடு கண்டறியப்பட்டது. Borax அல்லது Solubor உரத்தை பரிந்துரைக்கப்பட்ட அளவில் பயன்படுத்தவும்."
     },
-
-
     "nitrogen": {
-
-        "English":
-        "Nitrogen deficiency detected. Use Urea or nitrogen-rich fertilizer.",
-
-        "Telugu":
-        "నైట్రోజన్ లోపం కనిపించింది. యూరియా వంటి ఎరువును వాడండి.",
-
-        "Hindi":
-        "नाइट्रोजन की कमी है। Urea fertilizer उपयोग करें।",
-
-        "Tamil":
-        "நைட்ரஜன் குறைபாடு உள்ளது. Urea பயன்படுத்தவும்."
+        "English": "Nitrogen deficiency detected. Use Urea or nitrogen-rich fertilizer in recommended quantity. Consult a local agriculture officer before applying.",
+        "Telugu": "నైట్రోజన్ లోపం కనిపించింది. యూరియా లేదా నైట్రోజన్ అధికంగా ఉన్న ఎరువును సిఫార్సు చేసిన మోతాదులో వాడండి.",
+        "Hindi": "नाइट्रोजन की कमी पाई गई है। Urea या nitrogen-rich fertilizer को recommended मात्रा में उपयोग करें।",
+        "Tamil": "நைட்ரஜன் குறைபாடு கண்டறியப்பட்டது. Urea அல்லது nitrogen-rich உரத்தை பரிந்துரைக்கப்பட்ட அளவில் பயன்படுத்தவும்."
     },
-
-
     "magnesium": {
-
-        "English":
-        "Magnesium deficiency detected. Use Magnesium sulphate.",
-
-        "Telugu":
-        "మెగ్నీషియం లోపం కనిపించింది. మెగ్నీషియం సల్ఫేట్ వాడండి.",
-
-        "Hindi":
-        "मैग्नीशियम की कमी है। Magnesium sulphate उपयोग करें।",
-
-        "Tamil":
-        "மக்னீசியம் குறைபாடு உள்ளது. Magnesium sulphate பயன்படுத்தவும்."
+        "English": "Magnesium deficiency detected. Use Magnesium sulphate or Epsom salt in recommended quantity. Consult a local agriculture officer before applying.",
+        "Telugu": "మెగ్నీషియం లోపం కనిపించింది. మెగ్నీషియం సల్ఫేట్ లేదా ఎప్సమ్ సాల్ట్‌ను సిఫార్సు చేసిన మోతాదులో వాడండి.",
+        "Hindi": "मैग्नीशियम की कमी पाई गई है। Magnesium sulphate या Epsom salt को recommended मात्रा में उपयोग करें।",
+        "Tamil": "மக்னீசியம் குறைபாடு கண்டறியப்பட்டது. Magnesium sulphate அல்லது Epsom salt பயன்படுத்தவும்."
     },
-
-
     "kalium": {
-
-        "English":
-        "Potassium deficiency detected. Use MOP or Potash fertilizer.",
-
-        "Telugu":
-        "పొటాషియం లోపం కనిపించింది. పొటాష్ ఎరువును వాడండి.",
-
-        "Hindi":
-        "पोटैशियम की कमी है। Potash fertilizer उपयोग करें।",
-
-        "Tamil":
-        "பொட்டாசியம் குறைபாடு உள்ளது. Potash உரம் பயன்படுத்தவும்."
+        "English": "Potassium deficiency detected. Use MOP or Potash fertilizer in recommended quantity. Consult a local agriculture officer before applying.",
+        "Telugu": "పొటాషియం లోపం కనిపించింది. MOP లేదా పొటాష్ ఎరువును సిఫార్సు చేసిన మోతాదులో వాడండి.",
+        "Hindi": "पोटैशियम की कमी पाई गई है। MOP या Potash fertilizer को recommended मात्रा में उपयोग करें।",
+        "Tamil": "பொட்டாசியம் குறைபாடு கண்டறியப்பட்டது. MOP அல்லது Potash உரத்தை பயன்படுத்தவும்."
     },
-
-
     "healthy": {
-
-        "English":
-        "Leaf looks healthy. No treatment required.",
-
-        "Telugu":
-        "ఆకు ఆరోగ్యంగా ఉంది. మందు అవసరం లేదు.",
-
-        "Hindi":
-        "पत्ता स्वस्थ है। किसी उपचार की आवश्यकता नहीं है।",
-
-        "Tamil":
-        "இலை ஆரோக்கியமாக உள்ளது. மருந்து தேவையில்லை."
+        "English": "Leaf looks healthy. No medicine required. Continue regular monitoring.",
+        "Telugu": "ఆకు ఆరోగ్యంగా ఉంది. మందు అవసరం లేదు. రెగ్యులర్‌గా గమనించండి.",
+        "Hindi": "पत्ता स्वस्थ है। दवा की आवश्यकता नहीं है। नियमित निगरानी जारी रखें।",
+        "Tamil": "இலை ஆரோக்கியமாக உள்ளது. மருந்து தேவையில்லை."
     }
 }
 
