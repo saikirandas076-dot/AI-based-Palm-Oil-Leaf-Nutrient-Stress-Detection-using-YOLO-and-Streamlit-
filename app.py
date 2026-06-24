@@ -22,49 +22,36 @@ if not os.path.exists(MODEL_PATH):
 # Load YOLO model
 model = YOLO(MODEL_PATH)
 
-st.markdown("""
-<style>
+def add_bg(image_file):
+    with open(image_file, "rb") as file:
+        encoded = base64.b64encode(file.read()).decode()
 
-/* Background Image */
-[data-testid="stAppViewContainer"] {
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0.75)
-    ),
-    url("https://images.unsplash.com/photo-1586771107445-d3ca888129ff");
+    st.markdown(
+        f"""
+        <style>
+        [data-testid="stAppViewContainer"] {{
+            background-image:
+            linear-gradient(
+                rgba(0,0,0,0.65),
+                rgba(0,0,0,0.65)
+            ),
+            url("data:image/jpg;base64,{encoded}");
 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }}
 
+        [data-testid="stHeader"] {{
+            background: transparent;
+        }}
 
-/* Make header transparent */
-[data-testid="stHeader"] {
-    background: transparent;
-}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-
-/* All text white */
-h1, h2, h3, h4, h5, h6, p, label, span {
-    color: white !important;
-}
-
-
-/* Result boxes little transparent */
-.stAlert {
-    background-color: rgba(0,0,0,0.5);
-}
-
-
-/* Image captions */
-.caption {
-    color: white !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
+add_bg("bg.jpg")
 
 
 # ---------------- APP TITLE ----------------
