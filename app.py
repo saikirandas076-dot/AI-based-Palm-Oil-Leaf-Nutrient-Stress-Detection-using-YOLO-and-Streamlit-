@@ -24,27 +24,45 @@ model = YOLO(MODEL_PATH)
 
 st.markdown("""
 <style>
+
+/* Background Image */
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1586771107445-d3ca888129ff");
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1586771107445-d3ca888129ff");
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-[data-testid="stAppViewContainer"]::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: -1;
-}
 
+/* Make header transparent */
 [data-testid="stHeader"] {
     background: transparent;
 }
+
+
+/* All text white */
+h1, h2, h3, h4, h5, h6, p, label, span {
+    color: white !important;
+}
+
+
+/* Result boxes little transparent */
+.stAlert {
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+/* Image captions */
+.caption {
+    color: white !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
