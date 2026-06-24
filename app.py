@@ -22,6 +22,32 @@ if not os.path.exists(MODEL_PATH):
 # Load YOLO model
 model = YOLO(MODEL_PATH)
 
+st.markdown("""
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1586771107445-d3ca888129ff");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+[data-testid="stAppViewContainer"]::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 # ---------------- APP TITLE ----------------
 
